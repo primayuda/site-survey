@@ -940,7 +940,7 @@ map.on('load', function () {
         'step',
         ['get', 'point_count'],
         '#51bbd6',
-        2,
+        5,
         '#f1f075',
         10,
         '#f28cb1'
@@ -949,7 +949,7 @@ map.on('load', function () {
         'step',
         ['get', 'point_count'],
         20,
-        2,
+        5,
         30,
         10,
         40
@@ -982,7 +982,9 @@ map.on('load', function () {
     }
   });
   // add Navigation control
-  map.addControl(new mapboxgl.NavigationControl({showCompass: false}));
+  map.addControl(new mapboxgl.NavigationControl({
+    showCompass: false
+  }));
   map.addControl(new mapboxgl.ScaleControl(), 'bottom-right');
 
   // inspect a cluster on click
@@ -1012,7 +1014,7 @@ map.on('load', function () {
     const coordinates = e.features[0].geometry.coordinates.slice();
     const name = e.features[0].properties.name;
     const cellid = e.features[0].properties.cellid;
-    
+
 
 
     // Ensure that if the map is zoomed out such that
